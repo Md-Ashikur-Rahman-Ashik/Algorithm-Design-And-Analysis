@@ -4,4 +4,5 @@ My code repository for Algorithm Design And Analysis (Sessional) course.
 Added linear search algorithm's code on 15th February, 2026.  
 
 Added binary search algorithm's code on 15th February, 2026.  
-Added binary search (left most index) algorithm's code on 17th February, 2026.
+Added binary search (left most index) algorithm's code on 17th February, 2026.  
+Added binary search (right most index) algorithm's code on 17th February, 2026.
