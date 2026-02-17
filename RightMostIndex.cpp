@@ -42,11 +42,11 @@ int main()
     }
 
     if (index == -1)
-    { // If the value of flag is true, the output will be Yes
+    { // If the desired number doesn't exist on the array, current output will be shown
         cout << "Element Isn't Found\n";
     }
     else
-    { // If the value of flag is false, the output will be No
+    { // If the desired number exists on the array, output will be the index
         cout << "The index of " << desiredNumber << "is " << index << '\n';
     }
 
