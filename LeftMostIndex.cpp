@@ -1,22 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
-    int arraySize;    // Declared a variable to store array size
-    cin >> arraySize; // Taken input of array size
-
-    int integerArray[arraySize]; // Declared an array of array size
-    for (int i = 0; i < arraySize; i++)
-    { // Taken input of array
-        cin >> integerArray[i];
-    }
-
-    int desiredNumber;    // Declared varible to store desired number
-    cin >> desiredNumber; // Taken input of desired number
-
-    sort(integerArray, integerArray + arraySize); // Sorting array to ascending order
-
+int leftMostIndex(int arraySize, int integerArray[], int desiredNumber){
     int l = 0;             // Initialized left index
     int r = arraySize - 1; // Initialized right Index
 
@@ -40,6 +25,25 @@ int main()
             l = mid + 1; // the left index will be the next index of mid
         }
     }
+
+    return index;  // The value of index will be returned
+}
+
+int main()
+{
+    int arraySize;    // Declared a variable to store array size
+    cin >> arraySize; // Taken input of array size
+
+    int integerArray[arraySize]; // Declared an array of array size
+    for (int i = 0; i < arraySize; i++)
+    { // Taken input of array
+        cin >> integerArray[i];
+    }
+
+    int desiredNumber;    // Declared varible to store desired number
+    cin >> desiredNumber; // Taken input of desired number
+
+    int index = leftMostIndex(arraySize, integerArray, desiredNumber);
 
     if (index == -1)
     { // If the desired number doesn't exist on the array, current output will be shown
