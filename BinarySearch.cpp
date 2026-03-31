@@ -41,8 +41,6 @@ int main()
     int desiredNumber;    // Declared varible to store desired number
     cin >> desiredNumber; // Taken input of desired number
 
-    sort(integerArray, integerArray + arraySize); // Sorting array to ascending order
-
     bool flag = BinarySearch(integerArray, arraySize, desiredNumber);   // Called Binary Search function
 
     if (flag == true)
