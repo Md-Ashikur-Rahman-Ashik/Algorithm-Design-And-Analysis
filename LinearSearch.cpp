@@ -1,6 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+bool LinearSearch(int arraySize, int integerArray[], int desiredNumber){
+    for (int i = 0; i < arraySize; i++)
+    { // Traversing the entire array to find desired number
+        if (integerArray[i] == desiredNumber)
+        {                // Checking if the value of this index is the desired number
+            return true; // If the current number is desired number, true will be returned
+        }
+    }
+
+    return false;   // If the desired number isn't found, false will be returned
+}
+
 int main()
 {
     int arraySize;    // Declared a variable to store array size
@@ -15,15 +27,8 @@ int main()
     int desiredNumber;    // Declared varible to store desired number
     cin >> desiredNumber; // Taken input of desired number
 
-    bool flag = false; // Declared variable to track desired number
-    for (int i = 0; i < arraySize; i++)
-    { // Traversing the entire array to find desired number
-        if (integerArray[i] == desiredNumber)
-        {                // Checking if the value of this index is the desired number
-            flag = true; // If the current number is desired number, the value of flag will be true
-            break;       // If the number is found, we will break the loop
-        }
-    }
+    bool flag = LinearSearch(arraySize, integerArray, desiredNumber);   // Called linear search function
+    
 
     if (flag == true)
     { // If the value of flag is true, the output will be Yes
