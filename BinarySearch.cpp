@@ -3,7 +3,6 @@ using namespace std;
 
 bool BinarySearch(int integerArray[], int arraySize, int desiredNumber)
 {
-    bool f = false;        // Declared variable to track the desired number
     int l = 0;             // Initialized left index
     int r = arraySize - 1; // Initialized right Index
 
@@ -13,8 +12,7 @@ bool BinarySearch(int integerArray[], int arraySize, int desiredNumber)
 
         if (integerArray[mid] == desiredNumber)
         {             // Checks if the value of mid index is equal to desired number
-            f = true; // If value of mid index is equal to desired number, the value of flag will be true
-            break;    // The loop will break
+            return true; // If value of mid index is equal to desired number, true will be returned
         }
         else if (integerArray[mid] > desiredNumber)
         {                // Checks if the value of mid is greater than desired number
@@ -25,6 +23,8 @@ bool BinarySearch(int integerArray[], int arraySize, int desiredNumber)
             l = mid + 1; // the left index will be the next index of mid
         }
     }
+
+    return false;  // If the value is not found, false will be returned
 }
 
 int main()
