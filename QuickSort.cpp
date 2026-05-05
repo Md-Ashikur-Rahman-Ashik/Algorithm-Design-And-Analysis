@@ -42,7 +42,7 @@ int main()
         cin >> arr[i]; // Taken input of each element one by one in every iteration
     }
 
-    quickSort(arr, 0, arraySize); // Called quickSort function and passed array, low index value and high index value as arguments
+    quickSort(arr, 0, arraySize - 1); // Called quickSort function and passed array, low index value and high index value as arguments
 
     for (int i = 0; i < arraySize; i++) // Written loop to print the sorted array
     {
